@@ -4,12 +4,19 @@
 #sidebar {
   overflow: hidden;
   z-index: 3;
+  /* z-index càng cao thì element đó đứng trước và hiện lên trên. */
+
   border: none;
   border-radius: 25px;
   max-width: 300px;
+  /* chiều rộng lớn nhất cho một phần tử */
+
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.16);
 }
 #sidebar .list-group {
   min-width: 100px;
+  /* chiều rộng nhỏ nhất cho một phần tử */
+
   background-color: #353a56;
   min-height: 90vh;
   max-width: 300px;
@@ -23,6 +30,8 @@
   background-color: #353a56;
   color: #eee;
   white-space: nowrap;
+  /* các chữ không xuống dòng */
+
   border: none;
   border-radius: 25px;
   margin: 1em 1em 1em 1em;
@@ -38,6 +47,8 @@
   content: '\f0d7';
   font-family: FontAwesome;
   display: inline;
+  /* được hiển thị theo chiều ngang */
+
   text-align: right;
   padding-left: 5px;
 }
@@ -63,6 +74,8 @@
   color: #eee;
   height: 100px;
   position: sticky;
+  /* menu không trược  */
+
   margin-top: 100%;
   bottom: 0px;
 }
@@ -73,15 +86,21 @@
   background-color: #262a48 !important;
 }
 /* end css exlore */
+
 @media (max-width: 1024px) {
   #sidebar {
     min-width: 35px;
     max-width: 40px;
     overflow-y: auto;
+    /* nội dung được cắt bớt */
+
     overflow-x: visible;
+    /* nội dung được ghi đè */
+
     transition: all 0.25s ease;
     transform: translateX(-45px);
     position: fixed;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0);
   }
 
   #sidebar.show {
